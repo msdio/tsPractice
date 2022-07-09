@@ -1,0 +1,30 @@
+.close-button {
+    color: black;
+}
+
+.content-container {
+
+    padding: 15px 20px;
+    height: 100%;
+
+    .input-item-wrapper {
+        margin-bottom: 35px;
+    }
+
+    .label {
+        font-size: 16px;
+        font-weight: 500;
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    ion-input {
+        border-bottom: 1px solid #DADADA;
+    }
+
+    .add-button {
+        --background: #ebcfa7;
+        --background-activated: #e1c69f;
+
+    }
+}

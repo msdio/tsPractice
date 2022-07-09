@@ -1,0 +1,32 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon class="close-button" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Add Memo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- 전체를 감싸는 박스 -->
+  <div class="content-container">
+
+    <!-- 제목 입력 -->
+    <div class="input-item-wrapper">
+      <span class="label">Title</span>
+      <ion-input placeholder="Enter title"></ion-input>
+    </div>
+
+    <!-- 내용 입력 -->
+    <div class="input-item-wrapper">
+      <span class="label">Description</span>
+      <ion-textarea rows="6" placeholder="Enter description"></ion-textarea>
+    </div>
+
+    <!-- 등록 버튼 -->
+    <ion-button class="add-button" expand="block">Add Memo</ion-button>
+  </div>
+
+</ion-content>

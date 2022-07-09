@@ -1,0 +1,40 @@
+ion-icon {
+    color: black;
+}
+
+.content-container {
+    padding: 0 20px;
+}
+
+.title-wrapper {
+    margin-bottom: 40px;
+
+    span {
+        display: block;
+        font-size: 23px;
+        font-weight: 600;
+        margin: 5px 0;
+    }
+    
+    .pink-font {
+        color: #f99595;
+    }
+}
+
+.memo-item-wrapper {
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #e6e6e6;
+
+    .memo-title {
+        font-size: 15px;
+        font-weight: 500;
+        display: block;
+    }
+
+    .memo-content {
+        font-size: 13px;
+        color: #a7a7a7;
+        display: block;
+    }
+}

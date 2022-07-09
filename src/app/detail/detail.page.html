@@ -1,0 +1,38 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="#" text=""></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- 전체를 감싸는 박스 -->
+  <div class="content-container">
+
+    <!-- 이미지 영역 -->
+    <div class="image-wrapper">
+      <img [src]="receivedData.volumeInfo.imageLinks.thumbnail">
+    </div>
+
+    <!-- 정보 영역 -->
+    <div class="description-wrapper">
+
+      <!-- 제목 -->
+      <span class="description-title">{{receivedData.volumeInfo.title}}</span>
+
+      <!-- 감독 -->
+      <div class="description-director-wrapper">
+        <span class="description-director" *ngFor="let director of receivedData.volumeInfo.authors">{{director}}</span>
+      </div>
+
+      <!-- 설명 레이블 -->
+      <span class="description-label">Description</span>
+
+      <!-- 설명 -->
+      <span class="description-content">{{receivedData.volumeInfo.description}}</span>
+
+    </div>
+  </div>
+</ion-content>
