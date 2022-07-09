@@ -1,5 +1,7 @@
 {
   "name": "movieChart",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
