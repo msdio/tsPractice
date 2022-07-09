@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, NavigationExtras, Navigation } from '@angular/router'
 
 @Component({
   selector: 'app-tab1',
@@ -122,6 +123,17 @@ export class Tab1Page {
 
 
 
-  constructor() {}
+  constructor(private router: Router) {}
 
+  onClickedMovieItem(movie) {
+    //상세 페이지에 전달할 데이터 포장
+    let navigationExtras: NavigationExtras = {
+        state: {
+            movie: movie
+        }
+    };
+
+    this.router.navigate(['/detail/'], navigationExtras);
+
+  }
 }

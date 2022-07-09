@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-detail',
@@ -7,20 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailPage implements OnInit {
 
-  receivedData = {
-    "volumeInfo": {
-      "title": "Star Wars: Return of the Jedi (Episode VI)",
-      "authors": [
-          "George Lucas"
-      ],
-      "description": "Luke Skywalker attempts to bring his father back to the light side of the Force. At the same time, the rebels hatch a plan to destroy the second Death Star.",
-      "imageLinks": {
-          "thumbnail": "../../assets/images/starwars3.jpg"
-      }
-    }
-  };
+  receivedData;
 
-  constructor() { }
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private router: Router
+  ) {
+    this.activatedRoute.queryParams.subscribe(params => {
+      if(this.router.getCurrentNavigation().extras.state) {
+        this.receivedData = this.router.getCurrentNavigation().extras.state.movie;
+      }
+
+    });
+   }
 
   ngOnInit() {
   }

@@ -13,7 +13,7 @@
     </div>
 
     <!-- 차트 목록 영역 -->
-    <div class="chart-item-wrapper" *ngFor="let movie of moviedata.items">
+    <div class="chart-item-wrapper" *ngFor="let movie of moviedata.items" (click)="onClickedMovieItem(movie)">
       <div class="thumbnail-wrapper">
         <img [src]="movie.volumeInfo.imageLinks.thumbnail" />
       </div>      
