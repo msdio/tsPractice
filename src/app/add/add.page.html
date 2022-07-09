@@ -1,7 +1,7 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-button>
+      <ion-button (click)="onClickedCloseButton()">
         <ion-icon class="close-button" name="close"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -16,17 +16,17 @@
     <!-- 제목 입력 -->
     <div class="input-item-wrapper">
       <span class="label">Title</span>
-      <ion-input placeholder="Enter title"></ion-input>
+      <ion-input placeholder="Enter title" [(ngModel)]="title"></ion-input>
     </div>
 
     <!-- 내용 입력 -->
     <div class="input-item-wrapper">
       <span class="label">Description</span>
-      <ion-textarea rows="6" placeholder="Enter description"></ion-textarea>
+      <ion-textarea rows="6" placeholder="Enter description" [(ngModel)]="content"></ion-textarea>
     </div>
 
     <!-- 등록 버튼 -->
-    <ion-button class="add-button" expand="block">Add Memo</ion-button>
+    <ion-button class="add-button" expand="block" (click)="onClickAddButton()">Add Memo</ion-button>
   </div>
 
 </ion-content>

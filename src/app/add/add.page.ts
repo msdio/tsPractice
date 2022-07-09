@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-add',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddPage implements OnInit {
 
-  constructor() { }
+  title='' //제목
+  content='' //내용
+
+  constructor(private modalController: ModalController) { }
 
   ngOnInit() {
+  }
+
+  onClickedCloseButton() {
+    this.modalController.dismiss();
+  }
+
+  onClickAddButton() {
+    this.modalController.dismiss({
+      title: this.title,
+      content: this.content
+    });
+
   }
 
 }

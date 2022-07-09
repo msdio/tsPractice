@@ -1,7 +1,7 @@
 <ion-header [translucent]="true" class="ion-no-border">
   <ion-toolbar>
     <ion-buttons slot="end">
-      <ion-button>
+      <ion-button (click)="onClickedAddButton()">
         <ion-icon name="add-circle-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -20,9 +20,9 @@
     </div>
 
     <!-- 메모 목록 박스 -->
-    <div class="memo-item-wrapper">
-      <span class="memo-title">메모 제목입니다</span>
-      <span class="memo-content">메모 내용입니다</span>
+    <div class="memo-item-wrapper" *ngFor="let memo of memoData">
+      <span class="memo-title">{{memo.title}}</span>
+      <span class="memo-content">{{memo.content}}</span>
     </div>
 
   </div>
